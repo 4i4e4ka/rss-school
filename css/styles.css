@@ -94,7 +94,7 @@ li {
 }
 
 .hero-text {
-  color: var(--primary-text-color)
+  color: var(--primary-text-color);
   font-family:Open Sans; 
   font-size:18px;
   line-height:1.5;
@@ -200,19 +200,22 @@ text-align: center;
 
 
 .flex-element-first {
+  position: relative;
   width: 300px;
   height: 360px;
   margin-right: 60px;
-  /* width: calc((100% - 60px) / 3); */ */
+
  outline: 2 solid tomato;
  background-image: url("../images/deer.jpg");
+ 
 }
 
 .flex-element-second {
+  position: relative;
   width: 300px;
   height: 360px;
   margin-right: 60px;
-  /* width: calc((100% - 60px) / 3); */ */
+
  outline: 2 solid tomato;
  background-image: url("../images/squirrel.jpg");
 }
@@ -220,18 +223,20 @@ text-align: center;
 .flex-element-third {
   width: 300px;
   height: 360px;
-  /* margin: 60px; */
-  /* width: calc((100% - 60px) / 3); */ */
+ 
  outline: 2 solid tomato;
  background-image:url("../images/bird.jpg");
- 
+ position: relative;
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 
 
-.flex-text {
-  
- padding-top: 247px;
-}
+  .flex-text {
+  position: absolute;
+  top: 70%;
+  left: 20%;
+  }
 
 .subscription-title {
 font-size: 27px;
@@ -296,16 +301,35 @@ display: block;
 }
 
 
+
+.social .item:before {
+  content: "";
+  
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+ 
+  display: inline-block;
+  margin-right: 27px;
+}
+
+.social .item:last-child{
+  margin-right: 120px;
+}
+
 .icon-facebook::before {  
+ 
     background-image: url("../images/facebook.svg");  
 }
 .icon-instagram::before {  
-    background-image: url("../images/instagram.svg");  
+  background-image: url("../images/instagram.svg");  
 }
-.icon-telegram::before {  
-    background-image: url("../images/telegram.svg");  
-}
+
 .icon-na::before {  
-    background-image: url("../images/na.svg");  
+  background-image: url("../images/na.svg"); 
+}
+
+.icon-telega::before {  
+  background-image: url("../images/telegram.svg");  
 }
 
